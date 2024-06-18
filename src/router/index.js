@@ -11,6 +11,7 @@ import Profile from "../components/Auth/Profile.vue";
 import Departments from "../components/Technician/Departments.vue"
 import Equipments from "../components/Technician/Equipments.vue"
 import ScheduledMaintenance from "../components/Technician/ScheduledMaintenance.vue"
+import FaultReport from "../components/Technician/FaultReport.vue"
 
 import { userStore } from "../stores/user.js";
 
@@ -44,13 +45,14 @@ const router = createRouter({
         {path:'/departments',name:'Departments',component:Departments},
         {path:'/equipments',name:'Equipments',component:Equipments},
         {path:'/scheduled-maintenance',name:'ScheduledMaintenance',component:ScheduledMaintenance},
+        {path:'/faults-reports',name:'FaultReport',component:FaultReport},
       ]
     },
   ]
 })
 
 router.beforeEach((to,from,next)=>{
-  const protectedRoutes = ['Dashboard','Departments','Profile','Equipments','ScheduledMaintenance'];
+  const protectedRoutes = ['Dashboard','Departments','Profile','Equipments','ScheduledMaintenance','FaultReport'];
 
   userStore().loadFromSessionStorage();
 

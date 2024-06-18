@@ -77,6 +77,7 @@ export default {
       ['mdi-source-branch', 'Departments', '/departments'],
       ['mdi-toolbox-outline', 'Equipments', '/equipments'],
       ['mdi-clock-outline', 'Scheduled Maintenance', '/scheduled-maintenance'],
+      ['mdi-clock', 'Fault Reports', '/faults-reports'],
     ]
 
     const drawer = ref(null)
