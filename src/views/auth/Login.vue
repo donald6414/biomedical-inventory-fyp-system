@@ -96,7 +96,7 @@ export default {
       loading.value = true
       wrong_cred.value = null;
       axios
-        .post('http://127.0.0.1:8000/api/login', user.value)
+        .post('api/login', user.value)
         .then((response) => {
           switch (response.data[0]) {
             case 200:

@@ -106,7 +106,7 @@ export default {
       errors.value = []
       loading.value = true
       axios
-        .post('http://127.0.0.1:8000/api/reset_password', user.value)
+        .post('api/reset_password', user.value)
         .then((response) => {
           switch (response.data[0]) {
             case 200:

@@ -85,7 +85,7 @@ export default {
     //Logout button
     function logout() {
       axios
-        .post('http://127.0.0.1:8000/api/logout')
+        .post('api/logout')
         .then((response) => {
           switch (response.data[0]) {
             case 200:

@@ -123,7 +123,7 @@ export default {
     // Methods
     function get_user_profile() {
       axios
-        .get("http://127.0.0.1:8000/api/profile/" + userData.id)
+        .get("api/profile/" + userData.id)
         .then((response) => {
             user.value.name = response.data[1].name;
             user.value.email = response.data[1].email;
